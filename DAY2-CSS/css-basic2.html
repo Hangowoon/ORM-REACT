@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            font-size: ;
+        }
+
+        div {
+            width: 22%;
+            float: left;
+            margin: 10px;
+            border: 1px solid black;
+        }
+
+        /* div 태그내에 첫번째로 자식요소 중 h6태그의 스타일 적용 */
+        div:nth-of-type(1)>h6{
+            text-align: center;
+        }
+
+        div:nth-of-type(2)>h6{
+            text-align: left;
+        }
+
+        div:nth-of-type(3)>h6{
+            text-align: right;
+        }
+
+        div:nth-of-type(4)>h6{
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1>스타일 기본속성 - 글자텍스트 속성</h1>
+
+    <h2>텍스트 색상 지정하기</h2>
+    <h2 style="background: rgb(255,0,0);">rgb(255,0,0)방식 색상지정</h2>
+    <h2 style="background: red;">color 명칭기반 색상지정</h2>
+    <h2 style="background: #ff0000;">Hexadecimal을 색상지정</h2>
+
+    <h2 style="color: rgb(255,0,0);">rgb(255,0,0)방식 색상지정</h2>
+    <h2 style="color: red;">color 명칭기반 색상지정</h2>
+    <h2 style="color: #ff0000;">Hexadecimal을 색상지정</h2>
+
+    <h1>텍스트 정렬 처리하기</h1>
+    <div>
+        <p>center-중앙정렬</p>
+        <h6>
+            정부가 2025학년도 의대 입학 정원 확대 규모를 6일 오후 발표한다. 증원 규모는 1500~2000명 수준으로 예상된다.
+        </h6>
+    </div>
+
+    <div>
+        <p>left-왼쪽정렬</p>
+        <h6>
+            정부가 2025학년도 의대 입학 정원 확대 규모를 6일 오후 발표한다. 증원 규모는 1500~2000명 수준으로 예상된다.
+        </h6>
+    </div>
+        
+    <div>
+        <p>right-오른쪽정렬</p>
+        <h6>
+            정부가 2025학년도 의대 입학 정원 확대 규모를 6일 오후 발표한다. 증원 규모는 1500~2000명 수준으로 예상된다.
+        </h6>
+    </div>
+        
+    <div>
+        <p>center-양쪽정렬</p>
+        <h6>
+            정부가 2025학년도 의대 입학 정원 확대 규모를 6일 오후 발표한다. 증원 규모는 1500~2000명 수준으로 예상된다.
+        </h6>
+    </div>
+
+
+    <hr>
+    <h1>텍스트 꾸미기 실습</h1>
+
+    <h1 style="text-decoration: overline;">Overline</h1>
+    <h1 style="text-decoration: line-through;">Line-Through</h1>
+    <h1 style="text-decoration: underline;">Underline</h1>
+    <h1 style="text-decoration: initial;">initial</h1>
+
+    <hr>
+    <h1>글꼴 크기 지정하기</h1>
+    <p>글꼴 크기</p>
+    <p style="font-size: small;">글꼴 크기1</p>
+    <p style="font-size: 50px;">글꼴 크기2</p>
+    <p style="font-size: 150%;">글꼴 크기3</p>
+    <p style="font-size: 1.5em;">글꼴 크기4</p>
+</body>
+</html>

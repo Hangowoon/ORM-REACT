@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p{
+            color: white;
+            background: black;
+        }
+
+        .myclass {
+            color: white;
+            background: red;
+        }
+
+        #title {
+            color: white;
+            background: blue;
+        }
+
+        /* HTML 요소의 값을 기준으로 해서 선택된 스타일 적용하기 */
+        a[href]{
+            color: black;
+        }
+        a[href="www.yes24.com"]{
+            background-color: blue;
+        }
+        a[href*="yes24"]{
+            background: green;
+        }
+        a[href^="http"]{
+            background: yellow;
+        }
+        a[href$="kr"]{
+            background: purple;
+        }
+
+        /* 가상클래스 선택자 적용하기 */
+        a:link {
+            color: blue;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: pink;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        /* 클릭시 */
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        /* 하위선택자 스타일정의 */
+        ul a{
+            color: orange !important;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>선택자 사용하기</h1>
+
+    <p>요소 선택자 적용 부분</p>
+
+    <h2 class="myclass">클래스 선택자 적용1</h2>
+
+    <h3 class="myclass">클래스 선택자 적용2</h3>
+
+    <h3>클래스 미적용 선택자</h3>
+
+    <h3 id="title">아이디 선택자 적용</h3>
+
+    <hr>
+    <h1>속성 선택자 사용하기</h1>
+    <div>
+        <a href="www.yes2.com">YES24</a><br>
+        <a href="http://www.yes24.com">YES24</a><br>
+        <a href="www.google.co.kr">구글</a><br>
+        <a href="www.daum.net">다음</a><br>
+    </div>
+
+    <hr>
+    <h1>가상클래스-개발자 정의 클래스가 아닌 html자체에서 제공하는 기본스타일 제어하기</h1>
+
+    <a href="http://naver.com" target="_blank">네이버</a>
+
+    <hr>
+    <h1>복합선택자-하위</h1>
+    <ul>
+        <a href="#">링크정보</a>
+        <li>
+            <a href="#">항목1</a>
+        </li>
+        <li>
+            <p>항목2</p>
+        </li>
+        <li>
+            <p>항목3</p>
+        </li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table{
+            width: 100%;
+        }
+        table,td,th{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,td{
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 테이블 태그 -->
+    <table>
+        <thead>
+            <tr>
+                <th>글순번</th>
+                <th>제목</th>
+                <th>조회수</th>
+                <th>등록일시</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <th>제목입니다.</th>
+                <th>1</th>
+                <th>2023.12.12</th>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <caption>HTML5성적</caption>
+        <tr>
+            <th colspan="2">성명</th>
+            <th>성적</th>
+        </tr>
+        <tr>
+            <td rowspan="2">홍</td>
+            <td>길동</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>순신</td>
+            <td>90</td>
+        </tr>
+    </table>
+</body>
+</html>
