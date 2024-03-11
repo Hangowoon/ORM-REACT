@@ -52,15 +52,15 @@ const Register = () => {
       };
 
       axios
-        .post('http://localhost:3005/api/member/entry')
+        .post('http://localhost:3005/api/member/entry', memberData)
         .then((res) => {
-          consol.log('회원가입 처리 결과 반환값:', res.data);
+          console.log('회원가입 처리 결과 반환값:', res.data);
 
           //로그인 페이지로 자동이동처리
           navigate('/login');
         })
         .catch((err) => {
-          consol.log('에러발생:', err);
+          console.log('에러발생:', err);
         });
     },
   });
