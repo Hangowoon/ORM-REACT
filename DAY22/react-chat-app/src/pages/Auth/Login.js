@@ -1,7 +1,5 @@
 import React, { useCallback, useEffect } from 'react';
 
-import axios from 'axios'; // 백엔드통신
-
 // reactstrap은 bootstrap을 react에서 더 쉽게 사용하기 위한 부트스트랩 지원 리액트 패키지
 import {
   Container,
@@ -24,6 +22,8 @@ import { connect, useDispatch } from 'react-redux';
 
 import { Link, useNavigate } from 'react-router-dom';
 
+import axios from 'axios'; // 백엔드통신
+
 //formik은 리액트에서 form을 다루는 코드들을 쉽게 작성할 수 있도록 도와주는 패키지
 import { useFormik } from 'formik';
 
@@ -35,8 +35,6 @@ import logodark from '../../assets/images/logo-dark.png';
 import logolight from '../../assets/images/logo-light.png';
 
 const Login = (props) => {
-  const navigate = useNavigate();
-
   //폼 유효성검사 및 폼데이터처리
   const formik = useFormik({
     initialValues: {
@@ -66,12 +64,12 @@ const Login = (props) => {
 
           if (res.data.code == '200') {
             //step1: 사용자 엡브라우저의 저장공간인 localStorage공간에 서버에서 보내준 사용자인증 jwt토큰값을 영구보관한다.
-            window.localStorage.setItem('jwttoken', res.data.data);
+            window.localStorage.setItem('jwttoken', res.data.data.);
 
             //tip: 사용자 웹브라우저에 저장공간인 localStorage공간에 저장된 데이터를 불러오기
             const storageToken = window.localStorage.getItem('jwttoken');
             console.log(
-              '사용자 엡 블우저에 저장된 JWT사용자토큰값: ',
+              '사용자 엡 브라우저에 저장된 JWT사용자토큰값: ',
               storageToken
             );
           }
